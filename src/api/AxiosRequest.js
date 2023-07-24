@@ -3,7 +3,7 @@ import { AxiosInstance } from './AxiosInstance';
 const fetchQuestions = async (tag, page) => {
 	try {
 		let response = await AxiosInstance().get(
-			`/2.3/questions?page=1&pagesize=8&order=desc&sort=hot&tagged=react&site=stackoverflow`
+			`/2.3/questions?page=${page}&pagesize=8&order=desc&sort=hot&tagged=${tag}&site=stackoverflow`
 		);
 
 		return response;
